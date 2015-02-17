@@ -50,7 +50,7 @@ public class BasicImageOperation extends Grid2D{
 				} 
 				
 				sinogram.putPixelValue(s+sinogram.getWidth()/2, thetaGrad, sum);
-
+// Kommentar
 
 			
 			}
