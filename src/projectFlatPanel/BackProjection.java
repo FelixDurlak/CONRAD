@@ -18,7 +18,7 @@ public class BackProjection extends Grid2D {
 	}
 	
 	public static void main(String args[]) {
-//		new ImageJ();
+		new ImageJ();
 		// bild laden
 		BackProjection bp = new BackProjection(256, 256);
 		bp.phantom.show();
@@ -95,7 +95,7 @@ public class BackProjection extends Grid2D {
 			for (int x = 0; x < reconstructed.getWidth(); x++) {
 				
 				for (int thetaGrad = 0; thetaGrad < sinogram.getHeight(); thetaGrad++) {
-					double theta = (thetaGrad)* Math.PI/sinogram.getHeight();
+					double theta = (thetaGrad)* 2 * Math.PI/sinogram.getHeight();
 											
 					double s = (x-reconstructed.getWidth()/2) * Math.cos(theta) + (y-reconstructed.getHeight()/2) * Math.sin(theta);
 					// float interpValue =sinogram.getAtIndex((int)(s+sinogram.getWidth()/2), thetaGrad);

@@ -9,7 +9,12 @@ public class Phantom extends Grid2D{
 		super(width, height);
 		
 		this.draw(this);
-		
+//		for (int i = 20; i < 100; i++) {
+//			for (int j = 20; j < 100; j++) {
+//				this.putPixelValue(i, j, 1);
+//			}
+//			
+//		}
 		// a, b, midPointx, midPointy, intesity, theta
 		
 	}
@@ -22,7 +27,7 @@ public class Phantom extends Grid2D{
 	}
 	
 	public static Phantom getSinogram(Phantom bio) {
-		double grad = 2000;
+		double grad = 180;
 		Phantom sinogram = new Phantom((int)Math.sqrt(Math.pow(bio.getWidth(),2) + Math.pow(bio.getHeight(),2)),(int)grad);
 		
 		for (int s = -sinogram.getWidth()/2; s < sinogram.getWidth()/2; s++) {
@@ -60,14 +65,15 @@ public class Phantom extends Grid2D{
 		for (int row = 0; row < orig.getHeight(); row++) {
 			for (int col = 0; col < orig.getWidth(); col++) {
 
-				orig.drawEllipse(orig, Math.round((float) 0.45*orig.getHeight()), Math.round((float)0.4*orig.getWidth()), Math.round((float)orig.getHeight()/2), Math.round((float)orig.getWidth()/2), 1, 0, row, col);
-				orig.drawEllipse(orig, Math.round((float) 0.42*orig.getHeight()), Math.round((float)0.37*orig.getWidth()), Math.round((float)orig.getHeight()/2), Math.round((float)orig.getWidth()/2), 0.3, 0, row, col);
-				orig.drawEllipse(orig, Math.round((float) 0.15*orig.getHeight()), Math.round((float)0.1*orig.getWidth()), orig.getHeight()/2+0.5, orig.getWidth()/2+0.5, 1, 0, row, col);
-				orig.drawEllipse(orig, Math.round((float) 0.06*orig.getHeight()), Math.round((float)0.03*orig.getWidth()), Math.round((float)3*orig.getHeight()/5), Math.round((float)5*orig.getWidth()/7), 0.9, Math.PI/3, row, col);
-				orig.drawEllipse(orig, Math.round((float) 0.2*orig.getHeight()), Math.round((float)0.05*orig.getWidth()), Math.round((float)3*orig.getHeight()/5), Math.round((float)1*orig.getWidth()/3), 0.8, -Math.PI/3, row, col);
-				orig.drawEllipse(orig, Math.round((float) 0.2*orig.getHeight()), Math.round((float)0.2*orig.getWidth()), Math.round((float)orig.getHeight()/2), Math.round((float)orig.getWidth()/2), 0.1, 0, row, col);
-				orig.drawEllipse(orig, Math.round((float) 0.02*orig.getHeight()), Math.round((float)0.03*orig.getWidth()), Math.round((float)5*orig.getHeight()/7), Math.round((float)3*orig.getWidth()/7), 0, Math.PI/5, row, col);
-				orig.drawEllipse(orig, Math.round((float) 0.03*orig.getHeight()), Math.round((float)0.04*orig.getWidth()), Math.round((float)4*orig.getHeight()/5), Math.round((float)4*orig.getWidth()/7), 1, Math.PI/4, row, col);
+//				orig.drawEllipse(orig, Math.round((float) 0.5*orig.getHeight()), Math.round((float)0.5*orig.getWidth()), orig.getHeight()/2, orig.getWidth()/2, 1, 0, row, col);
+//				orig.drawEllipse(orig, Math.round((float) 0.42*orig.getHeight()), Math.round((float)0.37*orig.getWidth()), Math.round((float)orig.getHeight()/2), Math.round((float)orig.getWidth()/2), 0.3, 0, row, col);
+				orig.drawEllipse(orig, Math.round((float) 0.45*orig.getHeight()), Math.round((float)0.45*orig.getWidth()), orig.getHeight()/2, orig.getWidth()/2, 1, 0, row, col);
+//				orig.drawEllipse(orig, Math.round((float) 0.44*orig.getHeight()), Math.round((float)0.44*orig.getWidth()), orig.getHeight()/2, orig.getWidth()/2, 0, 0, row, col);
+//				orig.drawEllipse(orig, Math.round((float) 0.06*orig.getHeight()), Math.round((float)0.03*orig.getWidth()), Math.round((float)3*orig.getHeight()/5), Math.round((float)5*orig.getWidth()/7), 0.9, Math.PI/3, row, col);
+//				orig.drawEllipse(orig, Math.round((float) 0.2*orig.getHeight()), Math.round((float)0.05*orig.getWidth()), Math.round((float)3*orig.getHeight()/5), Math.round((float)1*orig.getWidth()/3), 0.8, -Math.PI/3, row, col);
+//				orig.drawEllipse(orig, Math.round((float) 0.2*orig.getHeight()), Math.round((float)0.2*orig.getWidth()), Math.round((float)orig.getHeight()/2), Math.round((float)orig.getWidth()/2), 0.1, 0, row, col);
+//				orig.drawEllipse(orig, Math.round((float) 0.02*orig.getHeight()), Math.round((float)0.03*orig.getWidth()), Math.round((float)5*orig.getHeight()/7), Math.round((float)3*orig.getWidth()/7), 0, Math.PI/5, row, col);
+//				orig.drawEllipse(orig, Math.round((float) 0.03*orig.getHeight()), Math.round((float)0.04*orig.getWidth()), Math.round((float)4*orig.getHeight()/5), Math.round((float)4*orig.getWidth()/7), 1, Math.PI/4, row, col);
 											
 			}
 		}
