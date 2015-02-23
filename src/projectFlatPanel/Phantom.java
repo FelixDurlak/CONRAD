@@ -18,6 +18,24 @@ public class Phantom extends Grid2D{
 		// a, b, midPointx, midPointy, intesity, theta
 		
 	}
+	
+	public Phantom(int width, int height, boolean a) {
+		super(width, height);
+		
+		if (a) {
+			this.draw(this);	
+		} else {
+			for (int i = (int) Math.round(0.6*height); i < (int) Math.round(0.9*height); i++) {
+				for (int j = (int) Math.round(0.6*width); j < (int) Math.round(0.9*width); j++) {
+					this.putPixelValue(i, j, 1);
+				}
+			
+			}
+		}
+
+		// a, b, midPointx, midPointy, intesity, theta
+		
+	}
 
 	public static void main(String args[]) {
 		Phantom test = new Phantom(128,128);
@@ -67,7 +85,7 @@ public class Phantom extends Grid2D{
 
 //				orig.drawEllipse(orig, Math.round((float) 0.5*orig.getHeight()), Math.round((float)0.5*orig.getWidth()), orig.getHeight()/2, orig.getWidth()/2, 1, 0, row, col);
 //				orig.drawEllipse(orig, Math.round((float) 0.42*orig.getHeight()), Math.round((float)0.37*orig.getWidth()), Math.round((float)orig.getHeight()/2), Math.round((float)orig.getWidth()/2), 0.3, 0, row, col);
-				orig.drawEllipse(orig, Math.round((float) 0.45*orig.getHeight()), Math.round((float)0.45*orig.getWidth()), orig.getHeight()/2, orig.getWidth()/2, 1, 0, row, col);
+				orig.drawEllipse(orig, Math.round((float) 0.2*orig.getHeight()), Math.round((float)0.2*orig.getWidth()), orig.getHeight()/4, orig.getWidth()/4, 1, 0, row, col);
 //				orig.drawEllipse(orig, Math.round((float) 0.44*orig.getHeight()), Math.round((float)0.44*orig.getWidth()), orig.getHeight()/2, orig.getWidth()/2, 0, 0, row, col);
 //				orig.drawEllipse(orig, Math.round((float) 0.06*orig.getHeight()), Math.round((float)0.03*orig.getWidth()), Math.round((float)3*orig.getHeight()/5), Math.round((float)5*orig.getWidth()/7), 0.9, Math.PI/3, row, col);
 //				orig.drawEllipse(orig, Math.round((float) 0.2*orig.getHeight()), Math.round((float)0.05*orig.getWidth()), Math.round((float)3*orig.getHeight()/5), Math.round((float)1*orig.getWidth()/3), 0.8, -Math.PI/3, row, col);
