@@ -71,7 +71,7 @@ public class Phantom extends Grid2D{
 				sinogram.putPixelValue(s+sinogram.getWidth()/2, thetaGrad, sum);
 			
 			}
-			System.out.println(s);
+//			System.out.println(s);
 		}
 		
 		

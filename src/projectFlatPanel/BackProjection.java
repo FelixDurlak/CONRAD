@@ -56,7 +56,7 @@ public class BackProjection extends Grid2D {
 			filteredSinogram[row] = sinogramTransform[row].getRealSubGrid(0,sinogram.getWidth());
 		}
 		Phantom result = new Phantom(sinogram.getWidth(), sinogram.getHeight());
-		System.out.println(result.getHeight() + "/" + result.getWidth());
+//		System.out.println(result.getHeight() + "/" + result.getWidth());
 		for (int row = 0; row < result.getHeight(); row++) {
 			for (int col = 0; col < result.getWidth(); col++) {
 				result.setAtIndex(col, row, filteredSinogram[row].getAtIndex(col));
@@ -120,7 +120,7 @@ public class BackProjection extends Grid2D {
 			filteredSinogram[row] = sinogramTransform[row].getRealSubGrid(0,sinogram.getWidth());
 		}
 		Phantom result = new Phantom(sinogram.getWidth(), sinogram.getHeight());
-		System.out.println(result.getHeight() + "/" + result.getWidth());
+//		System.out.println(result.getHeight() + "/" + result.getWidth());
 		for (int row = 0; row < result.getHeight(); row++) {
 			for (int col = 0; col < result.getWidth(); col++) {
 				result.setAtIndex(col, row, filteredSinogram[row].getAtIndex(col));
